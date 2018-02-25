@@ -1,4 +1,4 @@
-# OLX Spider
+# OLX Spider (using scrapy)
 
 ### About
 Simple spider, crawling on https://www.olx.pl/ and gaining data about job offers.
