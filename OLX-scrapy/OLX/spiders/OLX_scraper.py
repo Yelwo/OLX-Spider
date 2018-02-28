@@ -31,12 +31,13 @@ class OLX_spider(scrapy.Spider):
             else:
                 return result.strip()
 
+        # extract timestamp
         if(len(response.css('div.offer-titlebox__details em::text').extract()) > 2):
             added = response.css('div.offer-titlebox__details em::text').extract()[2].strip().split(', ')[1][:-1]
         else:
             added = response.css('div.offer-titlebox__details em::text').extract_first().strip().split(', ')[1][:-1]
 
-
+        # extract data
         yield {
             'title' :  extract_with_css('div.offer-titlebox h1::text'),
             'city' : extract_with_css('div.offer-titlebox__details a.show-map-link strong::text').split(', ')[0],
