@@ -3,7 +3,7 @@
 ### About
 Simple spider, crawling on https://www.olx.pl/ and gaining data about job offers.
 
-### A few graphs, made with pandas from collected data
+### A few graphs made from collected data. The graphs were made using Pandas.
 
 - Offers number by city
 
